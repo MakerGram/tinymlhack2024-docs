@@ -25,8 +25,11 @@ jobs:
       - run: npm install -g pnpm
       - run: pnpm install
       - run: pnpm run build
+      - run: pnpm run export
         env:
           BASE_PATH: /tinymlhack2024-docs
+      - name: List Files After Export
+        run: ls -R out
       - name: Prepare for Deployment
         run: |
           mkdir -p deployment
