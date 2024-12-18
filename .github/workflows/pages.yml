@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write  # Required to push to a branch
   pages: write
   id-token: write
 
@@ -26,18 +26,30 @@ jobs:
       - run: pnpm install
       - run: pnpm run build
         env:
-          BASE_PATH: /docs-template
+          BASE_PATH: /tinymlhack2024-docs
+      - name: Prepare for Deployment
+        run: |
+          mkdir -p deployment
+          mv ./out/* ./deployment/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./deployment
 
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Download Build Artifact
+        uses: actions/download-pages-artifact@v3
+      - name: Deploy to `page` Branch
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git checkout --orphan page
+          git rm -rf .
+          cp -r ./deployment/* .
+          git add .
+          git commit -m "Deploy to page branch"
+          git push -f origin page
