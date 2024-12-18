@@ -1,0 +1,17 @@
+{
+  "index": "Introduction",
+  "esp32s3": "XIAO ESP32S3 Sense",
+  "nrf52840": "XIAO nRF52840 Sense",
+  "visionv2": "Grove Vision v2",
+  "edgeimpulse": "Edge Impulse",
+  "about": {
+    "title": "About",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://tinymlhack.com/",
+    "newWindow": true
+  }
+}
