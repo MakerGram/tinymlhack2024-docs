@@ -1,23 +1,23 @@
-# Nextra Docs Template 
+## tinyML Hackathon Documentation
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+Welcome to the official repository for the **tinyML Hackathon Documentation**! This repository serves as a comprehensive guide for participants, providing all the resources, examples, and instructions needed to succeed in the hackathon.
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+## Overview
+This documentation is designed to:
+- Help participants understand the hackathon structure and expectations.
+- Provide practical examples and tutorials for tinyML projects.
+- Offer resources and support to ensure a smooth and productive experience.
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+## How to Use
+1. Navigate through the folders and files to access the specific information you need.
+2. Refer to the example projects for inspiration and guidance.
+3. Utilize the training guides and resources to build and document your project.
 
-## Quick Start
+## Contributing
+We welcome contributions to improve this documentation. If you’d like to add or edit content, feel free to submit a pull request or open an issue.
 
-Click the button to clone this repository and deploy it on Vercel:
+## Additional Information
+- **Website**: Visit [tinyMLHack](https://tinymlhack.com/) for more details about the hackathon.
+- **Support**: Reach out to the organizers if you have any questions or need assistance.
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
-
-## Local Development
-
-First, run `pnpm i` to install the dependencies.
-
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
-
-## License
-
-This project is licensed under the MIT License.
+Let’s make this hackathon a success together! Happy hacking! 🚀
