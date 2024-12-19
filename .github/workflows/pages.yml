@@ -22,18 +22,28 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: npm install -g pnpm
-      - run: pnpm install
-      - run: pnpm run build
-      - run: pnpm run export
+      - name: Cache pnpm modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build
+        run: pnpm run build
+      - name: Export
+        run: pnpm run export
         env:
           BASE_PATH: /tinymlhack2024-docs
-      - name: List Files After Export
-        run: ls -R out
       - name: Prepare for Deployment
         run: |
           mkdir -p deployment
-          mv ./out/* ./deployment/
+          cp -r out/* deployment/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./deployment
