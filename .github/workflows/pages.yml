@@ -39,10 +39,7 @@ jobs:
       - name: Prepare for Deployment
         run: |
           mkdir -p deployment
-          cp -r .next deployment/
-          cp -r public/* deployment/
-          cp package.json deployment/
-          cp pnpm-lock.yaml deployment/
+          cp -r out/* deployment/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./deployment
