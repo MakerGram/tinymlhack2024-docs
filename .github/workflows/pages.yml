@@ -36,14 +36,12 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build
         run: pnpm run build
-      - name: Export
-        run: pnpm run export
-        env:
-          BASE_PATH: /tinymlhack2024-docs
       - name: Prepare for Deployment
         run: |
           mkdir -p deployment
-          cp -r out/* deployment/
+          cp -r .next/standalone/* deployment/
+          cp -r .next/static deployment/.next/
+          cp -r public/* deployment/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./deployment
