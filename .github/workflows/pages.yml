@@ -35,11 +35,15 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Build
-        run: pnpm run build
+        run: |
+          pnpm run build
+          ls -la  # Debug: List files to see what was created
       - name: Prepare for Deployment
         run: |
+          ls -la  # Debug: List files again
           mkdir -p deployment
-          cp -r out/* deployment/
+          cp -r .next/static deployment/
+          cp -r dist/* deployment/ || cp -r out/* deployment/ || cp -r build/* deployment/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./deployment
