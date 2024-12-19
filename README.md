@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4008b04f-b9a5-47ac-95d0-81730c31bc91/deploy-status)](https://app.netlify.com/sites/tinymlhack2024-docs/deploys)
+
 ## tinyML Hackathon Documentation
 
 Welcome to the official repository for the **tinyML Hackathon Documentation**! This repository serves as a comprehensive guide for participants, providing all the resources, examples, and instructions needed to succeed in the hackathon.
