@@ -49,20 +49,12 @@ jobs:
           path: ./deployment
 
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Download Build Artifact
-        uses: actions/download-pages-artifact@v3
-      - name: Deploy to `page` Branch
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git checkout --orphan page
-          git rm -rf .
-          cp -r ./deployment/* .
-          git add .
-          git commit -m "Deploy to page branch"
-          git push -f origin page
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
