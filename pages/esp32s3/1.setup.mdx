@@ -1,0 +1,38 @@
+# Setup 📦
+
+The recommended programming tool for the XIAO ESP32S3 is the Arduino IDE, so as part of the software preparation, you will need to complete the Arduino installation.
+
+## Software Preparation
+
+* **Step 1:** Download and Install the stable version of Arduino IDE according to your operating system. Click [here](https://www.arduino.cc/en/software) to download.
+* **Step 2:** Add ESP32 board package to your Arduino IDE
+
+Navigate to **File > Preferences**, and fill **"Additional Boards Manager URLs"** with the url below:
+
+```
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+```
+![Arduino IDE Preferences](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/6.png)
+
+
+* **Step 3:** Install the ESP32 board package
+
+Navigate to *Tools > Board > Boards Manager*, and search for *ESP32*, then click *Install* to install the ESP32 board package.
+
+![Arduino IDE Boards Manager](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/9.png)
+
+* **Step 4:** Select your board and port.
+
+On top of the Arduino IDE, you can select the port directly. This is likely to be COM3 or higher (COM1 and COM2 are usually reserved for hardware serial ports).
+
+![Arduino IDE Select Board and Port](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/10.png)
+
+With this preparation, you can start writing programs for XIAO ESP32S3 to compile and upload.
+
+
+
+## ToDo
+
+- [ ] Install Arduino IDE
+- [ ] Add ESP32S3 board package to Arduino IDE
+
