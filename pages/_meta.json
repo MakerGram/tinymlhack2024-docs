@@ -1,5 +1,6 @@
 {
   "index": "Introduction",
+  "tools": "Hardware Tools",
   "esp32s3": "XIAO ESP32S3 Sense",
   "nrf52840": "XIAO nRF52840 Sense",
   "visionv2": "Grove Vision v2",
