@@ -5,6 +5,7 @@
   "nrf52840": "XIAO nRF52840 Sense",
   "visionv2": "Grove Vision v2",
   "edgeimpulse": "Edge Impulse",
+  "examples":"Examples",
   "about": {
     "title": "About",
     "type": "page"

@@ -1,0 +1,26 @@
+# Object Detection with XIAO ESP32S3 Sense 🔧
+
+## Object Detection versus Image Classification
+
+he main task with Image Classification models is to identify the most probable object category present on an image, for example, to classify between a cat or a dog, dominant "objects" in an image:
+
+![](https://hackster.imgix.net/uploads/attachments/1654476/img_class_Oafs1LJbVZ.jpg?auto=compress%2Cformat&w=740&h=555&fit=max)
+
+But what happens if there is no dominant category in the image?
+
+![](https://hackster.imgix.net/uploads/attachments/1654477/img_3_03NVYn1A61.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+
+An image classification model identifies the above image utterly wrong as an "ashcan, " possibly due to the color tonalities.
+
+To solve this issue, we need another type of model, where not only multiple categories (or labels) can be found but also where the objects are located on a given image.
+
+As we can imagine, such models are much more complicated and bigger, for example, the MobileNetV2 SSD FPN-Lite 320x320, trained with the COCO dataset. This pre-trained object detection model is designed to locate up to 10 objects within an image, outputting a bounding box for each object detected. The below image is the result of such a model running on a Raspberry Pi:
+
+![](https://hackster.imgix.net/uploads/attachments/1654478/img_4_Z4otzrJp6I.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+
+Those models used for object detection (such as the MobileNet SSD or YOLO) usually have several MB in size, which is OK for use with Raspberry Pi but unsuitable for use with embedded devices, where the RAM usually is lower than 1M Bytes or at least a few MB as in the case of the XIAO ESP32S3.
+
+## Follow the below guide to complete the project
+# [Object Detection with XIAO ESP32S3 Sense](https://www.hackster.io/mjrobot/tinyml-made-easy-object-detection-with-xiao-esp32s3-sense-6be28d)
+
+
