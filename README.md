@@ -24,9 +24,11 @@ Before you begin, ensure you have the following installed on your system:
 
 - **Node.js**: [Download and install Node.js](https://nodejs.org/) (LTS version recommended).
 - **pnpm**: A fast, disk space-efficient package manager. Install it globally if you don’t already have it:
+
   ```bash
   npm install -g pnpm
 ```
+
 ### Step 1: Clone the Repository
 
 Clone the repository to your local machine and navigate into the project directory:
