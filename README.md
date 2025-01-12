@@ -18,6 +18,50 @@ This documentation is designed to:
 ## Contributing
 We welcome contributions to improve this documentation. If you’d like to add or edit content, feel free to submit a pull request or open an issue.
 
+### Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+- **Node.js**: [Download and install Node.js](https://nodejs.org/) (LTS version recommended).
+- **pnpm**: A fast, disk space-efficient package manager. Install it globally if you don’t already have it:
+  ```bash
+  npm install -g pnpm
+```
+### Step 1: Clone the Repository
+
+Clone the repository to your local machine and navigate into the project directory:
+
+```bash
+git clone https://github.com/yourusername/tinyml-hackathon-docs.git
+cd tinyml-hackathon-docs
+```
+
+### Step 2: Install Dependencies
+
+Install the required dependencies using pnpm:
+
+```bash
+pnpm i
+```
+
+### Step 3: Start the Development Server
+
+Run the following command to start the local development server:
+
+```bash
+pnpm dev
+```
+
+By default, the documentation page will be accessible at:
+
+```
+http://localhost:3000
+```
+
+Open this URL in your browser to view the documentation page.
+
+
+
 ## Additional Information
 - **Website**: Visit [tinyMLHack](https://tinymlhack.com/) for more details about the hackathon.
 - **Support**: Reach out to the organizers if you have any questions or need assistance.
