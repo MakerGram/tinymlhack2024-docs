@@ -1,0 +1,63 @@
+# Team Momentum
+
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRAtZ-QEZ6XD6VmTUr-1lzeUHheSxgmGPLdAoHO6LBEUn4LPreiNLyXrz9XYDX__Ci_lCY7EFWtJQNd/embed?start=false&loop=false&delayms=3000" frameborder="0" width="860" height="469" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+### Team Members
+* Team Lead: Akshay S Rajan - CUSAT
+* Member 2 :Rashid C A - CUSAT
+* Member 3: Naveed P N - CUSAT
+* Member 4: Amal Murali P K - CUSAT
+
+
+## Project Description
+
+An intelligent and compact solution leveraging Tiny ML to detect, predict, and mitigate stampedes, ensuring public safety through real-time monitoring and analysis
+
+##  The Problem
+
+Stampedes in crowded areas often result in chaos, injuries, and fatalities, primarily due to the lack of real-time monitoring and effective crowd management solutions. Traditional methods are either slow, resource-intensive, or incapable of predicting such incidents proactively.
+
+## The Solution
+
+We solved this problem by implementing a Machine learning model on a TinyML component named Grove vision AI Module V2.
+
+This AI model utilizes the advanced  Swift-YOLO algorithm, focusing on person recognition, and can accurately detect and tag individuals in real-time video streams. It is particularly suited for the SeeedStudio Grove Vision AI (V2) device, offering high compatibility and stability
+
+## Technical Details
+
+###  Technologies/Components Used
+#### For Software:
+* Python - pyserial
+* Arduino IDE
+* Seeed Arduino SSCMA Library
+* Pre-trained AI Model ([Model Detail - - SenseCraft AI](https://sensecraft.seeed.cc/ai/#/model/detail?id=60242&tab=public))
+#### For Hardware:
+* Grove Vision AI Module V2
+* Seeed ESP32S3
+
+
+## Implementation
+
+* Plug and connect Grove Vision AI Module V2 to sense craft (Person Detection Model)
+* Download and install Seeed-Arduino-SSCMA Library from github ([GitHub](https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA/))
+* Add Library to Arduino IDE and include the header file
+* Connect ESP32S3 module with Grove Vision AI Module V2
+* Write a program to extract the person count and compare with the limit.
+* Add WIFI header file to utilize the WIFI functionality of ESP32S3 ("WiFi.h")
+* Add HTTPClient header file to make HTTP requests ("HTTPClient.h")
+* Implement Telegram notification system to Alert the organisers.
+* Write python code using pyserial to read the data from Module for further data analysis.
+* The collected data is uploaded to google sheet and graphs are created.
+
+## Installation
+
+
+
+
+
+
+
+
+

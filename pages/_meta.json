@@ -1,11 +1,11 @@
 {
   "index": "Introduction",
+  "2024projects": "TnyML Hack 2024 Projects Showcase",
   "tools": "Hardware Tools",
   "esp32s3": "XIAO ESP32S3 Sense",
   "nrf52840": "XIAO nRF52840 Sense",
   "visionv2": "Grove Vision v2",
   "edgeimpulse": "Edge Impulse",
-  "examples":"Examples",
   "about": {
     "title": "About",
     "type": "page"
